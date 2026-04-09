@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kilometor ot zemli | Музыкальный плеер</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <!-- ВЕРТИКАЛЬНЫЙ БАР ПРОГРЕССА СЛЕВА -->
+    <div class="album-progress-vertical" id="albumProgressVertical">
+        <div class="vertical-progress-header">
+            <i class="fas fa-chart-simple"></i>
+            <span>Прогресс<br>альбома</span>
+            <i class="fas fa-head-side-headphones"></i>
+        </div>
+        <div class="vertical-progress-container">
+            <div class="vertical-progress-fill" id="verticalProgressFill">
+                <div class="water-fill"></div>
+                <div class="water-wave"></div>
+                <div class="water-wave-2"></div>
+                <div class="water-bubbles" id="waterBubbles"></div>
+            </div>
+        </div>
+        <div class="vertical-progress-stats">
+            <span id="verticalCurrentTrack">1</span>
+            <span>/</span>
+            <span id="verticalTotalTracks">12</span>
+        </div>
+        <div class="vertical-progress-label">
+            <i class="fas fa-music"></i>
+            <span>трек</span>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ ПЛЕЕР -->
+    <div class="main">
+        <p class="name">Kilometor ot zemli</p>
+        <p class="opisanie">Занимаюсь музыкой с 2018г. Начинающий артист, музыкант, дизайнер, киберспортсмен и тд. :)</p>
+
+        <div class="music-player">
+            <div class="album-art">
+                <i class="fas fa-music"></i>
+            </div>
+
+            <div class="track-info">
+                <h3 class="track-title">Название трека</h3>
+                <p class="track-artist">Kilometor ot zemli</p>
+            </div>
+
+            <div class="track-counter">
+                <span id="currentTrackNum">1</span> / <span id="totalTracks">12</span>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn" id="loopBtn">
+                    <i class="fas fa-repeat"></i>
+                </button>
+                <button class="control-btn" id="prevBtn">
+                    <i class="fas fa-backward-step"></i>
+                </button>
+                <button class="control-btn play-pause" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <i class="fas fa-forward-step"></i>
+                </button>
+            </div>
+
+            <div class="progress-container">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill"></div>
+                    <div class="progress-thumb" id="progressThumb"></div>
+                </div>
+                <span class="duration">0:00</span>
+            </div>
+
+            <div class="volume-container">
+                <i class="fas fa-volume-up volume-icon" id="volumeIcon"></i>
+                <div class="volume-bar" id="volumeBar">
+                    <div class="volume-fill"></div>
+                    <div class="volume-thumb" id="volumeThumb"></div>
+                </div>
+                <span class="volume-percent" id="volumePercent">70%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОКОШКО ПЛЕЙЛИСТА СПРАВА -->
+    <div class="playlist-panel">
+        <div class="playlist-header">
+            <i class="fas fa-list-ul"></i>
+            <span>Плейлист</span>
+            <i class="fas fa-music"></i>
+        </div>
+        <div class="playlist-songs" id="playlistSongs"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
